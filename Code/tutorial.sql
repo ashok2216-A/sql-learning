@@ -99,4 +99,4 @@ select * from science_class where science_mark <= 78 order by science_mark desc 
 
 select rollno as RollNo, names as Names, science_mark as Percentages from science_class;
 
-select * from science_class;
+select names from science_class;
