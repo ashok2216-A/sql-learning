@@ -115,4 +115,10 @@ select avg(science_mark) / sum(science_mark) * 100 as AverageInPecentage from sc
 
 select max(science_mark) as Maximum, min(science_mark) as Minimum from science_class where RollNo between 6 and 8;
 
+select Names, count(science_mark) as totalmarks from science_class group by Names;
+
+select Names, count(science_mark) as totalmarks from science_class group by Names order by totalmarks desc;
+
+select Names, count(science_mark) as totalmarks, sum(science_mark) as summarks, max(science_mark) as maxmarks, min(science_mark) as minmarks, avg(science_mark) as averagemarks from science_class group by Names order by totalmarks desc limit 6;
+
 select * from science_class;
