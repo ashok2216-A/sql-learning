@@ -121,4 +121,10 @@ select Names, count(science_mark) as totalmarks from science_class group by Name
 
 select Names, count(science_mark) as totalmarks, sum(science_mark) as summarks, max(science_mark) as maxmarks, min(science_mark) as minmarks, avg(science_mark) as averagemarks from science_class group by Names order by totalmarks desc limit 6;
 
+select Names, count(science_mark) as totalmarks from science_class where Names like 't%' group by Names;
+
+select Names, count(science_mark) as totalmarks from science_class group by Names having count(science_mark) < 2;
+
+select Names, count(science_mark) as totalmarks from science_class where Names like 't%' group by Names having count(science_mark) < 2;
+
 select * from science_class;
