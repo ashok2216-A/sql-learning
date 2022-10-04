@@ -99,4 +99,20 @@ select * from science_class where science_mark <= 78 order by science_mark desc 
 
 select rollno as RollNo, names as Names, science_mark as Percentages from science_class;
 
-select names from science_class;
+select count(*) from science_class;
+
+select count(science_mark) as total, count(RollNo) as totalno from science_class;
+
+select count(science_mark) as total, count(RollNo) as totalno from science_class where Names = 'ashok';
+
+select sum(science_mark) as total, sum(RollNo) as totalno from science_class;
+
+select sum(science_mark) as total, sum(RollNo) as totalno from science_class where Names = 'ashok';
+
+select avg(science_mark) as Average, avg(RollNo) as Averageno from science_class;
+
+select avg(science_mark) / sum(science_mark) * 100 as AverageInPecentage from science_class;
+
+select max(science_mark) as Maximum, min(science_mark) as Minimum from science_class where RollNo between 6 and 8;
+
+select * from science_class;
