@@ -127,8 +127,12 @@ select Names, count(science_mark) as totalmarks from science_class group by Name
 
 select Names, count(science_mark) as totalmarks from science_class where Names like 't%' group by Names having count(science_mark) < 2;
 
+<<<<<<< HEAD
 select * from science_classss;
 
 use customer;
 
 select * from sales;
+=======
+select * from science_class;
+>>>>>>> cd0313c643a0d970afdb33fd423357be1f8a027d
