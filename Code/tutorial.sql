@@ -76,12 +76,12 @@ select * from science_class where names like '%n'
 
 select * from science_class where names not like 'jon%';
 
-select * from science_class where names like 'n/%'
+select * from science_class where names like 'a/%'
 
 -- sql 
 /* sql */
 
-select * from science_class where rollno between 1 and 6 order by science_mark desc;
+select * from science_class where Names between 1 and 6 order by science_mark desc;
 
 select * from science_class order by science_mark desc;
 
@@ -128,3 +128,7 @@ select Names, count(science_mark) as totalmarks from science_class group by Name
 select Names, count(science_mark) as totalmarks from science_class where Names like 't%' group by Names having count(science_mark) < 2;
 
 select * from science_classss;
+
+use customer;
+
+select * from sales;
