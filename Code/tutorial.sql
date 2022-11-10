@@ -98,3 +98,10 @@ select * from science_class order by science_mark asc, rollno desc limit 8;
 select * from science_class where science_mark <= 78 order by science_mark desc limit 6;
 
 select rollno as RollNo, names as Names, science_mark as Percentages from science_class;
+
+-------------------------------------------------------------------------------------------------------------
+
+use customer;
+
+select * from customer;
+
