@@ -102,6 +102,9 @@ select rollno as RollNo, names as Names, science_mark as Percentages from scienc
 -------------------------------------------------------------------------------------------------------------
 
 use customer;
-
+use sales;
 select * from customer;
-
+select * from sales;
+DROP TABLE `customer`.`m1_t4_v3 sales`;
+create table sales_2015 as select * from sales where `sales`.`Ship Date` between '2015-01-01' and '2015-12-31';
+select * from sales_2015;

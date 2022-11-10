@@ -1,4 +1,4 @@
-Customer ID,Customer Name,Segment,Age,Country,City,State,Postal Code,Region
+CustomerID,CustomerName,Segment,Age,Country,City,State,PostalCode,Region
 CG-12520,Claire Gute,Consumer,67,United States,Henderson,Kentucky,42420,South
 DV-13045,Darrin Van Huff,Corporate,31,United States,Los Angeles,California,90036,West
 SO-20335,Sean O'Donnell,Consumer,65,United States,Fort Lauderdale,Florida,33311,South
