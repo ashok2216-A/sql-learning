@@ -108,9 +108,9 @@ select * from sales;
 
 /*Creating sales table of year 2015*/
 
-Create table sales_2015 as select * from sales where `sales`.`ship date` between '2015-01-01' and '2015-12-31';
+Create table sales_2015 as select * from sales where `sales`.`ship date` between '01-01-2015' and '31-12-2015';
 select count(*) from sales_2015; --2131
-select count(distinct customer_id) from sales_2015;--578
+select count(distinct `sales_2015`.`Customer ID`) from sales_2015;--578
 
 /* Customers with age between 20 and 60 */
 create table customer_20_60 as select * from customer where age between 20 and 60;
