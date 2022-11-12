@@ -105,6 +105,15 @@ use customer;
 use sales;
 select * from customer;
 select * from sales;
-DROP TABLE `customer`.`m1_t4_v3 sales`;
-create table sales_2015 as select * from sales where `sales`.`Ship Date` between '2015-01-01' and '2015-12-31';
-select * from sales_2015;
+
+/*Creating sales table of year 2015*/
+
+Create table sales_2015 as select * from sales where `sales`.`ship date` between '2015-01-01' and '2015-12-31';
+select count(*) from sales_2015; --2131
+select count(distinct customer_id) from sales_2015;--578
+
+/* Customers with age between 20 and 60 */
+create table customer_20_60 as select * from customer where age between 20 and 60;
+select count (*) from customer_20_60;--597
+
+DROP TABLE `customer`.`sales_2015`;
