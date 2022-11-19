@@ -128,3 +128,21 @@ select
 from sales_2015 as a inner join customer_20_60 b on 
 `sales_2015`.`a.Customer ID`=`sales_2015`.`b.Customer ID` 
 order by `sales_2015`.`Customer ID`;
+
+select customername,length(customername) as characters from customer where age >30;
+
+select upper('ashok');
+select lower('ASHOK');
+
+select customername, country, Replace(country,'United States','US') as countrynew from customer;
+
+select trim(leading ' ' from '   ashok   ');
+select trim(trailing ' ' from '   ashok   ');
+select trim(both ' ' from '   ashok   ');
+select trim('   ashok   ');
+select ltrim('   ashok   ',' ');
+select rtrim('   ashok   ',' ');
+
+select customername, `customer`.`city`||' , '||`customer`.`state`||' , '||`customer`.`country` as address from customer;
+
+select * from customer;
