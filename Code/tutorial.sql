@@ -104,7 +104,7 @@ select rollno as RollNo, names as Names, science_mark as Percentages from scienc
 use customer;
 use sales;
 select * from customer;
-select * from sales;
+select * from sales_2015;
 
 /*Creating sales table of year 2015*/
 
@@ -117,3 +117,14 @@ create table customer_20_60 as select * from customer where age between 20 and 6
 select count (*) from customer_20_60;--597
 
 DROP TABLE `customer`.`sales_2015`;
+
+select 
+    a.orderline,
+    a.productid,
+    `sales`.`Customer ID`,
+    a.sales,
+    b.customername,
+    b.age
+from sales_2015 as a inner join customer_20_60 b on 
+`sales_2015`.`a.Customer ID`=`sales_2015`.`b.Customer ID` 
+order by `sales_2015`.`Customer ID`;
