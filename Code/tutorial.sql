@@ -156,7 +156,6 @@ from customer where substring(customerid,4, 5) = 'AB';
 
 select Order ID, string_agg(productid,',') from sales group by Order ID;
 
-select * from product;
 
 select `product`.`product name`, max(length(`product`.`product name`)) as max_len from product;
 
@@ -168,4 +167,10 @@ substring(`product`.`product id`,4, 4) as Column2,
 substring(`product`.`product id`,8, 15) as column3
 from product;
 
-select Category, `product`.`sub-Category` from product where  `product`.`sub-Category` = 'Chairs' and `product`.`sub-Category` = 'Tables';
+select Category, `product`.`sub-Category` from product where  `product`.`sub-Category` = 'Chairs' or `product`.`sub-Category` = 'Tables';
+
+select orderline, sales, ceil(sales), floor(sales) from sales where shipmode='second class';
+
+select random(), random()*40+10, floor(random()*40)+10;
+
+select * from sales;
