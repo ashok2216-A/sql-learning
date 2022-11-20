@@ -143,6 +143,29 @@ select trim('   ashok   ');
 select ltrim('   ashok   ',' ');
 select rtrim('   ashok   ',' ');
 
-select customername, `customer`.`city`||' , '||`customer`.`state`||' , '||`customer`.`country` as address from customer;
+select customername, City ||' , '|| State ||' , '|| Country as address from customer;
 
-select * from customer;
+select customerid, customername, 
+substring(customerid,1, 2) as cust_group 
+from customer where substring(customerid,1, 2) = 'AB';
+
+
+select customerid, customername, 
+substring(customerid,4, 5) as cust_group 
+from customer where substring(customerid,4, 5) = 'AB';
+
+select Order ID, string_agg(productid,',') from sales group by Order ID;
+
+select * from product;
+
+select `product`.`product name`, max(length(`product`.`product name`)) as max_len from product;
+
+select `product`.`product id`, `product`.`product name` ||' , '|| `product`.`Sub-Category` ||' , '|| `product`.`Category` as address from product;
+
+select `product`.`product id`, 
+substring(`product`.`product id`,1, 3) as Column1,
+substring(`product`.`product id`,4, 4) as Column2,
+substring(`product`.`product id`,8, 15) as column3
+from product;
+
+select Category, `product`.`sub-Category` from product where  `product`.`sub-Category` = 'Chairs' and `product`.`sub-Category` = 'Tables';
